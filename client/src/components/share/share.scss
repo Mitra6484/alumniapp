@@ -1,0 +1,118 @@
+@import "../../style.scss";
+
+.share {
+  @include themify($themes) {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    background-color: #ffffff; // White background
+    color: #1a1a1a; // Dark text color
+    margin-bottom: 20px;
+    max-width: 700px; // Ensure share component has a max-width like the posts
+    width: 100%; // Ensures it stretches to the container width
+    margin: 0 auto; // Center the share component
+
+    .container {
+      padding: 20px;
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+          display: flex;
+          align-items: center;
+          flex: 3;
+          width: 100%; // Ensures the left section takes full width
+
+          img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+          }
+
+          input {
+            flex: 1; // This ensures the input takes up the remaining space
+            border: none;
+            outline: none;
+            padding: 15px 10px;
+            background-color: #d3d3d3; // Light gray background for input
+            margin-left: 10px;
+            font-size: 16px;
+            color: #1a1a1a; // Dark text color
+            border-radius: 5px;
+          }
+        }
+
+        .right {
+          flex: 1;
+          display: flex;
+          justify-content: flex-end;
+
+          .file {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+
+      hr {
+        margin: 20px 0;
+        border: none;
+        height: 1px;
+        background-color: #d0e0ff; // Light blue for the divider
+      }
+
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .left {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+
+          .add-pic-button {
+            border: none;
+            padding: 8px 16px;
+            color: white;
+            background-color: #5271ff; // Blue button background
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+
+            &:hover {
+              background-color: #405dcf; // Darker blue on hover
+            }
+          }
+        }
+
+        .right {
+          button {
+            border: none;
+            padding: 8px 16px;
+            color: white;
+            background-color: #5271ff; // Blue button background
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+
+            &:hover {
+              background-color: #405dcf; // Darker blue on hover
+            }
+          }
+        }
+      }
+    }
+  }
+}

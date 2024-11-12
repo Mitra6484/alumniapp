@@ -1,0 +1,41 @@
+.followers-and-followings {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  
+    .followers, .followings {
+      width: 45%;
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+  
+      h2 {
+        text-align: center;
+      }
+  
+      .user-card {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        border-bottom: 1px solid #e0e0e0;
+        cursor: pointer;
+  
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin-right: 15px;
+        }
+  
+        span {
+          font-weight: bold;
+        }
+  
+        &:hover {
+          background-color: #f1f1f1;
+        }
+      }
+    }
+  }
+  

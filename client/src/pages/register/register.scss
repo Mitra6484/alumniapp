@@ -1,0 +1,125 @@
+@import "../../style.scss";
+
+.register {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6f0ff; // BRAC light blue background
+
+  .card {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #ffffff; // White background
+    border-radius: 12px;
+    min-height: 600px;
+    overflow: hidden;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+
+    .left {
+      flex: 1;
+      background: linear-gradient(
+          rgba(0, 51, 160, 0.7),
+          rgba(0, 51, 160, 0.7)
+        ),
+        url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600")
+          center;
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: #ffffff; // White text
+
+      h1 {
+        font-size: 90px;
+        line-height: 100px;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      button {
+        padding: 12px 20px;
+        border: none;
+        background-color: #ffffff; // White background
+        color: #0033a0; // BRAC blue
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          background-color: #cce0ff; // Light blue on hover
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 30px;
+
+      h1 {
+        color: #0033a0; // BRAC blue
+        font-size: 28px;
+        font-weight: 600;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        input, select {
+          border: none;
+          border-bottom: 2px solid lightgray;
+          padding: 10px;
+          font-size: 16px;
+          transition: border-color 0.3s ease;
+
+          &:focus {
+            border-bottom: 2px solid #0033a0; // BRAC blue on focus
+          }
+        }
+
+        .role-selection {
+          display: flex;
+          gap: 20px;
+
+          label {
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+
+            input[type="radio"] {
+              margin-right: 8px;
+              accent-color: #0033a0; // BRAC blue for radio button
+              cursor: pointer;
+              width: 18px;
+              height: 18px;
+            }
+          }
+        }
+
+        button {
+          padding: 12px;
+          border: none;
+          background-color: #0033a0; // BRAC blue
+          color: #ffffff; // White text
+          font-weight: bold;
+          cursor: pointer;
+          border-radius: 5px;
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+
+          &:hover {
+            background-color: #002080; // Darker blue on hover
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@import "../../style.scss";
+
+// Define theme colors for Brac University-like styling
+$primary-color: #003865; // Brac University's Blue
+$accent-color: #f1f1f1; // Light grey/white accent
+$dark-color: #000000;   // Black for materialistic contrast
+$text-color: #ffffff;   // White text for contrast
+
+.navbar {
+  @include themify($themes) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 60px;
+    background-color: $primary-color;
+    color: $text-color;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      // Updated logo styling for the BracU Alumni Network
+      .logo {
+        font-weight: bold;
+        font-size: 24px;
+        color: $text-color;
+        font-family: "Poppins", sans-serif; // Stylish font
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background-color: $accent-color;
+        border-radius: 30px;
+        padding: 5px 10px;
+        color: $dark-color;
+
+        input {
+          border: none;
+          background-color: transparent;
+          color: $dark-color;
+          width: 500px;
+
+          @include mobile {
+            display: none;
+          }
+
+          @include tablet {
+            width: 200px;
+          }
+
+          &::placeholder {
+            color: $dark-color;
+            font-size: 14px;
+          }
+        }
+
+        svg {
+          color: $dark-color;
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+
+      @include mobile {
+        display: none;
+      }
+
+      svg {
+        color: $text-color;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+
+      .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+
+        @include tablet {
+          display: none;
+        }
+
+        img {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 2px solid $accent-color;
+        }
+
+        span {
+          font-family: "Poppins", sans-serif;
+          color: $text-color;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
