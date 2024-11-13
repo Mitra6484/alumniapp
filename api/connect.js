@@ -1,12 +1,16 @@
 import mysql from 'mysql2';
-import fs from 'fs'; // To read the SSL certificate files (if required)
+import dotenv from 'dotenv';
 
+// Load environment variables from .env file
+dotenv.config();
+
+// Use environment variables to configure the MySQL connection
 export const db = mysql.createConnection({
-  host: 'mysql-187ab79d-anikmitraxd-6cbd.d.aivencloud.com',
-  port: 22011,
-  user: 'avnadmin',
-  password: 'AVNS_ivEpjT5axfaDzo-UCIN', // Your password here
-  database: 'defaultdb',
+  host: process.env.DB_HOST,
+  port: process.env.DB_PORT,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE,
 });
 
 db.connect((err) => {
