@@ -1,0 +1,35 @@
+# Ignore environment variable files
+.env
+.env.local
+.env.production
+.env.development
+
+
+
+
+# Ignore build files (if applicable)
+build/
+dist/
+
+# Ignore log files
+*.log
+*.log.*
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore npm/yarn lock files if you use separate client/server dependencies
+client/package-lock.json
+client/yarn.lock
+server/package-lock.json
+server/yarn.lock
+
+# Ignore temporary IDE files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Ignore any other local configuration files that shouldn't be tracked
+*.local
