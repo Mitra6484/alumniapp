@@ -18,7 +18,9 @@ app.use((req, res, next) => {
 app.use(express.json());
 app.use(
   cors({
-    origin: "https://alumniapp-client.vercel.app/",
+    origin: ["https://alumniapp-client.vercel.app"],
+    methods: ["POST","GET","DELETE","PUT"],
+    credentials: true
   })
 );
 app.use(cookieParser());
