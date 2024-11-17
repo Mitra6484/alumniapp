@@ -13,7 +13,7 @@ const FollowersAndFollowings = () => {
     const fetchFollowers = async () => {
       try {
         // Use absolute path
-        const res = await axios.get(`http://localhost:8800/relationships/${userId}/followers`);
+        const res = await axios.get(`https://alumniapp-server.vercel.app/relationships/${userId}/followers`);
         setFollowers(res.data);
       } catch (err) {
         console.log(err);
@@ -23,7 +23,7 @@ const FollowersAndFollowings = () => {
     // Fetch followings
     const fetchFollowings = async () => {
       try {
-        const res = await axios.get(`http://localhost:8800/relationships/${userId}/followings`);
+        const res = await axios.get(`https://alumniapp-server.vercel.app/relationships/${userId}/followings`);
         setFollowings(res.data);
       } catch (err) {
         console.log(err);
